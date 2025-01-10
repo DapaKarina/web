@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top center, rgba(255, 0, 170, 0.6), rgba(223, 237, 255, 0.6)), url('./assets/images/bg.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparan putih */
+  padding: 30px 40px;
+  border-radius: 15px; /* Membulatkan sudut */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan lembut */
+  width: 350px;
+  text-align: center;
+  backdrop-filter: blur(10px); /* Efek blur jika menggunakan background transparan */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f9f9f9;
+  transition: all 0.3s ease; /* Animasi halus */
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  background: #fff;
+}
+
+.login-btn {
+  background: linear-gradient(to right, #3b82f6, #60a5fa); /* Gradasi biru */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.4s ease; /* Animasi halus untuk efek hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan awal */
+  transform: rotate(0deg); /* Reset rotasi */
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #2563eb, #3b82f6); /* Warna lebih gelap */
+  transform: scale(1.2) rotate(5deg); /* Membesar dan sedikit miring */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar */
+}
+
+.login-btn:active {
+  background: #1e40af; /* Warna saat klik */
+  transform: scale(1.4) rotate(3deg); /* Kembali ke normal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Kembali ke bayangan awal */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+input.error {
+  border-color: #ff4d4d;
+  animation: shake 0.3s ease;
+}
+
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: height 0.4s ease, background-color 0.4s ease;
+}
+
+/* Gaya teks welcome */
+.welcome-text {
+  font-size: 4rem;
+  color: white;
+  margin: 0;
+  transition: font-size 0.4s ease, transform 0.4s ease;
+}
+
+/* Gaya ketika header mengecil */
+header.shrink {
+  height: 80px;
+  background-color: rgba(59, 130, 246, 0.9);
+}
+
+header.shrink .welcome-text {
+  font-size: 1.5rem;
+  transform: translateY(-20px);
+}
+
+/* Konten utama */
+.content {
+  margin-top: 100vh; /* Memberi ruang untuk header */
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
